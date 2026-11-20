@@ -56,7 +56,7 @@ jobs:
           key: ${{ matrix.platform.target }}
       - run: cargo +nightly fmt --check
       - run: cargo clippy
-      - run: cargo test
+      - run: cargo test -p komorebi-bar
       - uses: houseabsolute/actions-rust-cross@v1
         with:
           command: "build"
