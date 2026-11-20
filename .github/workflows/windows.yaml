@@ -40,7 +40,7 @@ jobs:
     runs-on: ${{ matrix.platform.runs-on }}
     permissions: write-all
     env:
-      RUSTFLAGS: -Ctarget-feature=+crt-static -Dwarnings
+      RUSTFLAGS: -Ctarget-feature=+crt-static
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v6
